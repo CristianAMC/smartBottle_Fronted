@@ -80,7 +80,7 @@
         methods: {
             RegisterOn: function (){
 
-                axios.post('http://localhost:4000/api/user/create', usuario).then(res => {
+                axios.post('http://localhost:4000/api/auth/create', usuario).then(res => {
                     console.log(res.data)
                 }).catch((error)=>{
                     console.log(error)

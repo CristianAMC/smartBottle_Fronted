@@ -15,11 +15,11 @@
       </li>
 
       <li class="nav-item" v-if="authenticated()">
-        <a class="nav-link" href="#"><router-link to="/botilito">Cristian</router-link></a>
+        <a class="nav-link" href="#"><router-link to="/mybottle">My bottle</router-link></a>
       </li>
 
       <li class="nav-item" v-if="authenticated()">
-        <a class="nav-link" href="#"><router-link to="/botilito">Werney</router-link></a>
+        <a class="nav-link" href="#"><router-link to="/alarms">Recordatorios</router-link></a>
       </li>            
 
       <li class="nav-item">

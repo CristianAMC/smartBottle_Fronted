@@ -42,7 +42,7 @@
         methods: {
             LoginOn: function (){
 
-                axios.post('http://localhost:4000/api/user/login', usuario).then(res => {
+                axios.post('http://localhost:4000/api/auth/login', usuario).then(res => {
                     saveToken(res.headers.authorization)
                     window.location.replace("/")
 
