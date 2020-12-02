@@ -1,9 +1,11 @@
 <template>
-
+    <div>
+        <h2>Working</h2>
+    </div>
 </template>
 
-<script lang="ts">
+<script>
 export default {
-    name: 'My Bottle'
+    name: 'MyBottle'
 }
 </script>

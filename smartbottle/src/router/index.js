@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Welcome from '../views/Welcome.vue'
+import guardian from '../core/Guardian'
 
 Vue.use(VueRouter)
 
@@ -21,7 +22,10 @@ const routes = [
   {
     path: '/',
     name: 'Welcome',
-    component: Welcome
+    component: Welcome,
+    beforeEnter: (to, from, next)=> {
+      guardian(to, from, next)
+    }
   },
   {
     path: '/register',
@@ -36,12 +40,18 @@ const routes = [
   {
     path: '/mybottle',
     name: 'My Bottle',
-    component: () => import('../views/MyBottle.vue')
-  },
+    component: () => import('../views/MyBottle.vue'),
+    beforeEnter: (to, from, next)=> {
+      guardian(to, from, next)
+    }
+   },
   {
     path: '/alarms',
     name: 'Alarms',
-    component: () => import('../views/Alarms.vue')
+    component: () => import('../views/Alarms.vue'),
+    beforeEnter: (to, from, next)=> {
+      guardian(to, from, next)
+    }
   }
 ]
 
